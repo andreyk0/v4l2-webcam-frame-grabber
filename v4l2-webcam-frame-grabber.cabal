@@ -1,0 +1,26 @@
+Name:                v4l2-webcam-frame-grabber
+Version:             0.1.0
+Synopsis:            Webcam image grabber based on "video for linux two examples"
+
+Description:
+  A utility to periodically grab an image from a webcam.
+  E.g. to implement a simple monitoring app.
+
+Homepage:            https://gitorious.org/hsv4l2
+License:             BSD3
+License-file:        LICENSE
+
+Category:            Graphics
+Build-type:          Simple
+Cabal-version:       >=1.2
+
+Executable v4l2-webcam-frame-grabber
+  Main-is: v4l2-webcam-frame-grabber/Main.hs
+  Build-depends:
+    base >= 3 && < 5,
+    cmdargs >= 0.10.7,
+    directory >= 1.2.0.1,
+    JuicyPixels >= 3.1.2,
+    v4l2 >= 0.1 && < 0.2,
+    vector >= 0.10.9.1
+  ghc-options: -O2 -Wall
